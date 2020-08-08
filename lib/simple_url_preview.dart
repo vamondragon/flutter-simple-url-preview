@@ -38,6 +38,7 @@ class SimpleUrlPreview extends StatefulWidget {
   /// Color for loader icon shown, till image loads
   final Color imageLoaderColor;
 
+
   SimpleUrlPreview({
     @required this.url,
     this.previewHeight,
@@ -208,10 +209,8 @@ class _SimpleUrlPreviewState extends State<SimpleUrlPreview> {
         : EmptyContainer();
   }
 
-  Card _buildPreviewCard(BuildContext context) {
-    return Card(
-      elevation: 5,
-      color: _bgColor,
+  Container _buildPreviewCard(BuildContext context) {
+    return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -228,7 +227,6 @@ class _SimpleUrlPreviewState extends State<SimpleUrlPreview> {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.all(8),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
